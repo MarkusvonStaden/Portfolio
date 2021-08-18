@@ -13,18 +13,18 @@ h1, h2, h3 {
 
 h1 {
     font-weight: 300;
-    font-size: 3em;
+    font-size: 4em;
     padding: 25px;
 }
 
 h2 {
-    font-size: 2.2em;
+    font-size: 3em;
     padding: 25px;
     line-height: 1;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 strong {
@@ -36,7 +36,7 @@ p {
     padding-top: 15px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 a {
@@ -65,7 +65,7 @@ section {
     scroll-snap-align: start;
     flex-direction: column;
     padding: 5em 2em;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
@@ -80,7 +80,7 @@ section {
 }
 
 .about {
-    max-width: 1000px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-template-areas: 
@@ -99,7 +99,7 @@ section {
 .about .subtitle {
     grid-area: subtitle;
     width: 120%;
-    height: 3em;
+    height: 4.5em;
 }
 
 .about #about {
@@ -110,7 +110,7 @@ section {
 .about img {
     grid-area: img;
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 250px;
     border-radius: 5px;
     box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
@@ -120,7 +120,7 @@ section {
 }
 
 .experience a:hover h3 {
-    font-size: 1.6em;
+    font-size: 2.4em;
 }
 
 .experience a:hover {
@@ -130,4 +130,39 @@ section {
 .experience .date {
     color:rgb(47, 72, 151);
     font-family: "Fira Code", monospace;
+}
+
+.project {
+    position: relative;
+    color:white;
+}
+
+.project h3 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+
+}
+
+.projects .projects-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.project img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    margin: 30px;
+    filter: grayscale(100%);
+    z-index: 1;
+}
+
+.project:hover img {
+    filter: grayscale(0%);
+    width: 530px;
+    height: 530px;
+    margin: 15px;
 }
