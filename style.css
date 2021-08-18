@@ -133,15 +133,19 @@ section {
 }
 
 .project {
-    position: relative;
+    width: 500px;
+    height: 500px;
     color:white;
+    overflow: hidden;
+    position: relative;
+    margin: 30px;
 }
 
 .project h3 {
     position: absolute;
     top: 50px;
     left: 50px;
-    z-index: 2;
+    z-index: 999;
 
 }
 
@@ -155,14 +159,12 @@ section {
     width: 500px;
     height: 500px;
     object-fit: cover;
-    margin: 30px;
     filter: grayscale(100%);
     z-index: 1;
+    transition: 500ms;
 }
 
 .project:hover img {
     filter: grayscale(0%);
-    width: 530px;
-    height: 530px;
-    margin: 15px;
+    transform: scale(1.2);
 }
