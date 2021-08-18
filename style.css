@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 3em;
+    padding: 25px;
+}
+
+h2 {
+    font-size: 2.2em;
+    padding: 25px;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+strong {
+    font-weight: 900;
+}
+
+p {
+    text-align: left;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.subtitle {
+    font-family: "Fira Code", monospace;
+    background:rgb(47, 72, 151);
+    color: white;
+    padding: 5px;
+    width: 60%;
+}
+
+#title {
+    text-align: right;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    flex-direction: column;
+    padding: 5em 2em;
+    height: 100vh;
+}
+
+.container {
+    scroll-snap-type:y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+}
+
+.hello {
+    height: 100vh;
+}
+
+.about {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas: 
+        "title img"
+        "subtitle img"
+        "about img";
+    grid-column-gap: 2em;
+    margin: auto;
+}
+
+.about h2 {
+    grid-area: title;
+
+}
+
+.about .subtitle {
+    grid-area: subtitle;
+    width: 120%;
+    height: 3em;
+}
+
+.about #about {
+    grid-area: about;
+    line-height: 1.6;
+}
+
+.about img {
+    grid-area: img;
+    max-width: 100%;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+.experience a {
+    margin: 0.5em;
+}
+
+.experience a:hover h3 {
+    font-size: 1.6em;
+}
+
+.experience a:hover {
+    color: gray;
+}
+
+.experience .date {
+    color:rgb(47, 72, 151);
+    font-family: "Fira Code", monospace;
+}
