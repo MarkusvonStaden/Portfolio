@@ -14,6 +14,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-color);
 }
@@ -88,7 +92,7 @@ button {
   z-index: 4;
   position: absolute;
   top: 2em;
-  left: 2em;
+  right: 2em;
   padding: 0.5em 1em;
   font-size: 1.2em;
   background: var(--color-accent);
@@ -98,9 +102,11 @@ button {
   cursor: pointer;
 }
 
-.menu {
+#sidebar {
+    left: 0;
+    opacity: 1;
   z-index: 3;
-  width: 100vw;
+  min-width: 25vw;
   height: 100vh;
   background: var(--bg-color);
   position: absolute;
@@ -108,9 +114,12 @@ button {
   align-items: center;
   justify-content: center;
   grid-template-columns: 1fr;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  transition: .5s;
 }
 
-.menu a {
+#sidebar a {
   max-width: 50%;
   background: var(--bg-color);
   color: var(--primary-text);
@@ -121,12 +130,13 @@ button {
   margin-right: auto;
 }
 
-.menu a:hover h3 {
+#sidebar a:hover h3 {
   color: var(--color-accent);
 }
 
-.menu.hidden {
-  display: none;
+#sidebar.hidden {
+  left: -25vw;
+  opacity: 0;
 }
 
 .hamburger {
@@ -135,7 +145,7 @@ button {
   cursor: pointer;
   position: absolute;
   top: 2em;
-  right: 2em;
+  left: 2em;
 }
 
 .bar1,
@@ -195,7 +205,7 @@ button {
   height: 4.5em;
 }
 
-.about #about {
+.about #description {
   grid-area: about;
   line-height: 1.6;
 }

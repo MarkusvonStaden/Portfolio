@@ -1,12 +1,17 @@
 let root = document.documentElement;
 let dark = false;
-let menu = document.getElementsByClassName("menu")[0];
+let menu = document.querySelector("#sidebar");
+let btn_hamburger = document.querySelector(".hamburger");
+let navItems = document.querySelectorAll(".nav__link");
 
-function hamburger(x) {
-    x.classList.toggle("change");
-    menu.classList.toggle("hidden")
-    console.log(menu);
+function hamburger() {
+    btn_hamburger.classList.toggle("change");
+    menu.classList.toggle("hidden");
 }
+
+navItems.forEach(el => {
+    el.addEventListener("click", hamburger);
+});
 
 root.addEventListener('keydown', event => {
     if (event.code === "ShiftLeft" || event.code === "ShiftRight") {

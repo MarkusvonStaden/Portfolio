@@ -3,9 +3,9 @@
 
 <!-- 
     TODOs:
-    Dark Mode mit Toggle
-    Download CV Button
-    Breadcrumbs
+    Seite für Erfahrungen
+    Seite für Projekte
+    Dark Mode Toggle
     Daten als JSON 
     Location erkennen und Sprache anpassen
     Skills
@@ -14,26 +14,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Markus von Staden</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="menu hidden">
-        <a href="">
+    <div class="hidden" id="sidebar">
+        <a href="#about" class="nav__link">
             <h3>About</h3>
         </a>
-        <a href="">
+        <a href="#experience" class="nav__link">
             <h3>Erfahrungen</h3>
         </a>
-        <a href="">
+        <a href="#projects" class="nav__link">
             <h3>Projekte</h3>
         </a>
-        <a href="">
+        <a href="#skills" class="nav__link">
             <h3>Skills</h3>
         </a>
     </div>
     <button onclick="window.open('lebenslauf.pdf')">PDF</button>
-    <div class="hamburger" onclick="hamburger(this)">
+    <div class="hamburger" onclick="hamburger()">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -45,10 +45,10 @@
             </p>
             <p class="subtitle" id="title">Mechatronik Student</p>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <h2>Über mich</h2>
             <p class="subtitle">Mechatronik Student - Entwickler in der Freizeit</p>
-            <div id="about">
+            <div id="description">
                 <p>
                     Meine Freizeit nutze ich, um an Projekten mit meinem 3D Drucker, meiner CNC Fräse und
                     Mikrocontrollern an Projekten zu arbeiten. Durch diese Projekte vereinfache ich meinen Alltag und
@@ -66,9 +66,9 @@
                     Konzernvorrausentwicklung bei Mahle zu sammeln
                 </p>
             </div>
-            <img src="profile.jpg" alt="Profilbild">
+            <img src="images/profile.jpg" alt="Profilbild">
         </section>
-        <section class="experience">
+        <section class="experience" id="experience">
             <h2>Erfahrungen und Ausbildung</h2>
             <div class="experience-list">
                 <a href="">
@@ -107,20 +107,20 @@
 
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h2>Projekte</h2>
             <div class="projects-list">
                 <a href="" class="project">
                     <h3>Blackboard2API</h3>
-                    <img src="code.png" alt="">
+                    <img src="images/code.png" alt="">
                 </a>
                 <a href="" class="project">
                     <h3>IoT Garagenöffner</h3>
-                    <img src="elektronik.jpg" alt="">
+                    <img src="images/elektronik.jpg" alt="">
                 </a>
                 <a href="" class="project">
                     <h3>Timecube</h3>
-                    <img src="profile.jpg" alt="">
+                    <img src="images/profile.jpg" alt="">
                 </a>
             </div>
         </section>
@@ -143,7 +143,7 @@
             </p>
         </footer>
     </div>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
