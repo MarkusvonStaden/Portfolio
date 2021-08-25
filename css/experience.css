@@ -1,0 +1,24 @@
+.container {
+    align-items: center;
+}
+
+.element .proof * {
+    width: 90%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.element {
+    width: 75%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "description proof";
+    column-gap: 50px;
+}
+
+.element .description *{
+    width: 100%;
+}

@@ -105,7 +105,7 @@ button {
 #sidebar {
     left: 0;
     opacity: 1;
-  z-index: 3;
+  z-index: 4;
   min-width: 25vw;
   height: 100vh;
   background: var(--bg-color);
@@ -140,7 +140,7 @@ button {
 }
 
 .hamburger {
-  z-index: 4;
+  z-index: 5;
   display: inline-block;
   cursor: pointer;
   position: absolute;
@@ -236,7 +236,7 @@ button {
   transition: 0.2s cubic-bezier(0.15, 0, 0.85, 1);
 }
 
-.experience .date {
+.date {
   color: var(--color-accent);
   font-family: "Fira Code", monospace;
 }
@@ -254,7 +254,7 @@ button {
   position: absolute;
   top: 10%;
   left: 10%;
-  z-index: 999;
+  z-index: 3;
   color: white;
 }
 
