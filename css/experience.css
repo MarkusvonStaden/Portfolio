@@ -1,3 +1,20 @@
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-text);
+    font-size: 2em;
+    color: var(--primary-text);;
+    left: 10px;
+    top: 10px;
+    font-weight: 1;
+    cursor: pointer;
+}
+
 .container {
     align-items: center;
 }
@@ -28,6 +45,7 @@
 }
 
 #modal {
+    z-index: 2;
     display: none;
     position: fixed;
     top: 0;
@@ -39,7 +57,6 @@
 }
 
 #modal-content {
-    background: #fefefe;
     margin: auto;
     border-radius: 10px;
     height: 90%;

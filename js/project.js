@@ -2,9 +2,9 @@ let root = document.documentElement;
 let modal = document.querySelector("#modal");
 let modalContent = document.querySelector("#modal-content");
 
-dark = false;
-
 window.addEventListener("popstate", closeModal);
+
+dark = false;
 
 function enableModal(el) {
     modal.style.display = "flex";
