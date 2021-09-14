@@ -3,13 +3,13 @@ let modal = document.querySelector("#modal");
 let modalContent = document.querySelector("#modal-content");
 
 let title = document.querySelector("#title");
-let subtitle = document.querySelector(".subtitle"); 
+let subtitle = document.querySelector(".subtitle");
 let description = document.querySelector("#description");
 let gallery = document.querySelector("#gallery");
 
 const urlparams = new URLSearchParams(window.location.search);
 
-project = fetch("projects/"+urlparams.get("project")+".json")
+project = fetch("projects/" + urlparams.get("project") + ".json")
     .then(results => results.json())
     .then(data => {
         document.title = data.title;
@@ -21,6 +21,13 @@ project = fetch("projects/"+urlparams.get("project")+".json")
             elem.src = img;
             elem.setAttribute("onclick", "enableModal(this)");
             gallery.appendChild(elem);
+        });
+        Object.entries(data.links).forEach(([key, value]) => {
+            let elem = document.createElement("a");
+            elem.href = value;
+            let text = document.createTextNode(key);
+            elem.appendChild(text);
+            description.appendChild(elem);
         })
     });
 

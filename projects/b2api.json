@@ -1,0 +1,10 @@
+{
+  "title": "Blackboard2API",
+  "languages": "Python, OpenCV, Tensorflow",
+  "description": "Dieses Projekt begann im Rahmen des Mechatronischen Projektes im 6. Semester. Ziel dieses Projektes ist es, in einem Videofeed die Tafel zu erkennen und den Inhalt der Tafel auszuwerten um zu erkennen, wann ein Tafelbild fertig ist. Eine Draufsicht des entzerrten Tafelbildes wird dann automatisch als Bild abgespeichert. \n \n Zur Erkennung wird OpenCV verwendet. Im Bild wird der größte grüne Bereich ermittelt und überprüft, ob dieser Viereckig ist. Ist dies der Fall, werden die Koordinaten der Ecken mit den Koordinaten des Vorhergegangenen Bildes verglichen. Ist die Abweichung zu groß, wird dieses Bild ausgelassen. Das entstehende Bild wird nun so entzerrt, dass keine Perspektive mehr vorhanden ist. Anschließend wird überprüft, wie viele Pixel von Kontrasten betroffen sind. Daraus lässt sich ableiten, wie viel die Tafel beschrieben ist. Fällt dieser Wert stark ab, deutet dies darauf hin, dass die Tafel gewischt wurde und ein Bild der Tafel zu dem Zeitpunkt, als der Kontrast maximal war, wird abgespeichert. \n\n Aktuell arbeite ich daran, die Erkennung der Tafel durch ein Machine-Learning Modell zu ersetzen. So ist das Projekt vielseitiger einsetzbar, zum Beispiel auch für Whiteboards.",
+  "images": ["images/bounding-box.png", "images/blackboard-content.png"],
+  "links": {
+    "Visit project on GitHub": "https://github.com/MarkusvonStaden/blackboard2api",
+    "check out the article on PH": "https://ph.com"
+  }
+}
