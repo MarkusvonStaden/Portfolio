@@ -1,6 +1,6 @@
 {
-    "title": "Project",
-    "languages": "Python, Javascript, OpenCV, Tensorflow",
-    "description": "Lorem Dicksum",
-    "images": ["images/profile.jpg", "images/code.png"]
+  "title": "Project",
+  "languages": "Python, Javascript, OpenCV, Tensorflow",
+  "description": "Lorem Ipsum",
+  "images": ["images/profile.jpg", "images/code.png"]
 }

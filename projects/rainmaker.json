@@ -1,0 +1,9 @@
+{
+  "title": "Smarte Lampe",
+  "languages": "C ESP-IDF Framework, Espressif Rainmaker, Altium Designer, Fusion360",
+  "description": "Eine Smarte Lampe, welche sich dank Espressif Rainmaker auch in den Google Assistant einbinden lässt und OTA Updates unterstützt.\n Da als Microcontroller ein ESP32 zum Einsatz kam, habe ich mich für das ESP IoT Developer Framework entschieden. Teil dieses Frameworks ist auch Rainmaker, ein System, um schnell und einfach Smart Home Geräte zu entwickeln, ohne sich um ein Backend, eine App oder Integration in Sprachassistenten kümmern zu müssen. Die dazugehörige Platine habe ich in Altium entwickelt und mit Autodesk Fusion360 ein passendes Gehäuse designt und anschließend 3D gedruckt.",
+  "images": ["images/profile.jpg", "images/code.png"],
+  "links": {
+    "Github Repository": ""
+  }
+}

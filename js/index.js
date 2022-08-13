@@ -4,6 +4,8 @@ let menu = document.querySelector("#sidebar");
 let btn_hamburger = document.querySelector(".hamburger");
 let navItems = document.querySelectorAll(".nav__link");
 
+// ! Add section--hidden class in JS instead of HTML
+
 function hamburger() {
     btn_hamburger.classList.toggle("change");
     menu.classList.toggle("hidden");
@@ -30,3 +32,24 @@ root.addEventListener('keydown', event => {
         }
     }
 });
+
+// Section Reveal
+const allSections = document.querySelectorAll("section");
+
+const revealSection = function (entries, oberserver) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove("section--hidden")
+    oberserver.unobserve(entry.target);
+}
+
+const SectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.2
+});
+
+allSections.forEach(section => {
+    SectionObserver.observe(section);
+    section.classList.add("section--hidden");
+})

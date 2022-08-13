@@ -1,10 +1,10 @@
 .hello {
-    height: 100vh;
-  }
+  height: 100vh;
+}
 
 #sidebar {
-    left: 0;
-    opacity: 1;
+  left: 0;
+  opacity: 1;
   z-index: 4;
   min-width: 25vw;
   height: 100vh;
@@ -16,7 +16,7 @@
   grid-template-columns: 1fr;
   box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 #sidebar a {
@@ -73,93 +73,98 @@
 }
 
 .about {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    grid-template-areas:
-      "title img"
-      "subtitle img"
-      "about img";
-    grid-column-gap: 2em;
-    margin: auto;
-  }
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-template-areas:
+    "title img"
+    "subtitle img"
+    "about img";
+  grid-column-gap: 2em;
+  margin: auto;
+}
 
 .about h2 {
-    grid-area: title;
-  }
-  
-  .about .subtitle {
-    grid-area: subtitle;
-    width: 120%;
-    height: 4.5em;
-  }
-  
-  .about #description {
-    grid-area: about;
-    line-height: 1.6;
-  }
-  
-  .about img {
-    grid-area: img;
-    max-width: 100%;
-    margin-bottom: 250px;
-    border-radius: 5px;
-    box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
-      0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
-  }
-  .experience-list {
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .experience a {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 70vw;
-  }
-  
-  .experience a:hover {
-    color: gray;
-    transform: scale(1.1);
-    transition: 0.2s cubic-bezier(0.15, 0, 0.85, 1);
-  }
-  
-  .project {
-    color: var(--secondary-text);
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    aspect-ratio: 1;
-    padding: 0;
-  }
-  
-  .project h3 {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    z-index: 3;
-    color: white;
-  }
-  
-  .projects .projects-list {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5em;
-    padding: 5em;
-  }
-  
-  .project img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    z-index: 1;
-    transition: 500ms;
-  }
-  
-  .project:hover img {
-    filter: grayscale(0%);
-    transform: scale(1.2);
-  }
+  grid-area: title;
+}
+
+.about .subtitle {
+  grid-area: subtitle;
+  width: 120%;
+  height: 4.5em;
+}
+
+.about #description {
+  grid-area: about;
+  line-height: 1.6;
+}
+
+.about img {
+  grid-area: img;
+  max-width: 100%;
+  margin-bottom: 250px;
+  border-radius: 5px;
+  box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+.experience-list {
+  justify-content: center;
+  align-items: center;
+}
+
+.experience a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 70vw;
+}
+
+.experience a:hover {
+  color: gray;
+  transform: scale(1.1);
+  transition: 0.2s cubic-bezier(0.15, 0, 0.85, 1);
+}
+
+.project {
+  color: var(--secondary-text);
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  aspect-ratio: 1;
+  padding: 0;
+}
+
+.project h3 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 3;
+  color: white;
+}
+
+.projects .projects-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5em;
+  padding: 5em;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  z-index: 1;
+  transition: 500ms;
+}
+
+.project:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
